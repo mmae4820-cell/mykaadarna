@@ -1,0 +1,52 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Web Layout</title>
+<style>
+header{background-color:violet;padding:5px;text-align:center;font-size:35px;color:white;} 
+section::after{content: ""display:table;clear:both;}
+
+/* Style the topnav */
+ul.nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: violet;
+}
+
+/* Style links in topnav */
+ul.nav li a {
+    display: block;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+ul.nav li a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+
+footer {background-color:pink;padding:5px;text-align:center;color:white;}
+</style>
+</head>
+<body>
+<header>
+<h2>SDIHS</h2>
+<h3 style="font-size-18px";>Santo Domingo Integrated High School</h3>
+</header>
+
+<ul class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">First Quarter</a></li>
+    <li><a href="#">Second Quarter</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+<footer>
+<p>enriquezstefhanie@gmail.com|09123456789</p>
+</footer>
+</body>
+</html>
