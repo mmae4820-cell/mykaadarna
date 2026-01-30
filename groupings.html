@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDIHS Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        article {
+            padding: 20px;
+            width: 70%;
+            background-color: pink;
+            min-height: 300px;
+        }
+
+        .sidebar {
+            width: 30%;
+            background: skyblue;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .sidebar ul li a:hover {
+            background: red;
+            color: white;
+        }
+
+        ul.nav {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: blue;
+        }
+
+        ul.nav li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.nav li a:hover {
+            background-color: skyblue;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: blue;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header, footer {
+            background-color: skyblue;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>SDIHS</h2>
+    <h3>Santo Domingo Integrated High School</h3>
+</header>
+
+<!-- TOP NAV -->
+<ul class="nav">
+    <li><a href="#" onclick="loadContent('home')">Home</a></li>
+    <li><a href="#" onclick="loadContent('about')">About</a></li>
+
+    <li class="dropdown">
+        <a href="#">Assessment</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="loadContent('assessment1')">Assessment 1</a>
+            <a href="#" onclick="loadContent('assessment2')">Assessment 2</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="#">References</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="loadContent('reference1')">Reference 1</a>
+            <a href="#" onclick="loadContent('reference2')">Reference 2</a>
+        </div>
+    </li>
+</ul>
+
+<section>
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#" onclick="loadContent('content')">Content</a></li>
+            <li><a href="#" onclick="loadContent('performance')">Performance Standard</a></li>
+            <li><a href="#" onclick="loadContent('standard')">Content Standard</a></li>
+            <li><a href="#" onclick="loadContent('competencies')">Learning Competencies</a></li>
+            <li><a href="#" onclick="loadContent('objectives')">Objectives</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <article id="content">
+        <h2>School Profile</h2>
+        <p>
+           <br> Santo Domingo Integrated High School was established in 1971.
+            It is located in Barangay Santo Domingo, City of Santa Rosa, Laguna.
+            The school is committed to providing quality education and promoting
+            a safe and productive learning environment for all learners. </br>
+
+
+<br> MISSION
+To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+
+Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.
+Teachers facilitate learning and constantly nurture every learner.
+Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.
+Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners. </br>
+
+
+<br> VISION
+We dream of Filipinos
+who passionately love their country
+and whose values and competencies
+enable them to realize their full potential
+and contribute meaningfully to building the nation.
+
+As a learner-centered public institution,
+the Department of Education
+continuously improves itself
+to better serve its stakeholders. </br>
+
+
+<br>CORE VALUES</br>
+<br>Maka-Diyos</br>
+<br>Maka-tao</br>
+<br>Makakalikasan</br>
+<br>Makabansa </br>
+        </p>
+    </article>
+
+</div>
+</section>
+
+<footer>
+    © SDIHS
+</footer>
+
+<script>
+function loadContent(section) {
+    const content = document.getElementById("content");
+
+    if (section === "home") {
+        content.innerHTML = `
+            <h2>School Profile</h2>
+            <p>
+                Santo Domingo Integrated High Sch
