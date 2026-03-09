@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Web Layout </title>
+
+<style>
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Article */
+article {
+    padding: 20px;
+    width: 70%;
+    background-color: pink;
+    min-height: 300px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background: lavender;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar ul li a:hover {
+    background: red;
+}
+
+/* Top Navigation */
+ul.nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:lavender;
+}
+
+ul.nav li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.nav li a:hover {
+    background-color: purple;
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: lightblue;
+    padding: 5px;
+    text-align: center;
+    color: blue;
+}
+
+/* Clearfix */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2> SDIHS </h2>
+    <h3 style="font-size: 18px;"> Santo Domingo Integrated High School </h3>
+</header>
+
+<!-- TOP NAVIGATION -->
+<ul class="nav">
+    <li> <a href="oo na2.html"> Home </a> </li>
+    <li> <a href="e portfolio2.html"> Activities </a> </li>
+    <li> <a href="e portfolio3.html"> Assessment </a> </li>
+    <li> <a href="https://m.facebook.com/"> About </a> </li>
+</ul>
+
+<section>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <ul>
+            <li> <a href="#" onclick="loadContent('content')"> Content </a> </li>
+            <li> <a href="#" onclick="loadContent('perstandard')"> Performance Standard</a> </li>
+            <li> <a href="#"    
+onclick="loadContent('constandard')"> Content Standard</a> </li>
+            <li> <a href="#"    
+onclick="loadContent('learningcom')"> 
+Learning Competencies</a> </li>
+            <li> <a href="#"    
+onclick="loadContent('objectives')"> Objectives</a> </li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <article id="content">
+        <h1> School Profile </h1>
+        <p>
+            Santo Domingo Integrated High School was founded in 1971. <br>
+            It is located at Barangay Santo Domingo, City of Santa Rosa, Laguna.
+        </p>
+    </article>
+
+</div>
+
+</section>
+
+<footer>
+    <p> © 2025 SDIHS </p>
+</footer>
+
+<script>
+
+function loadContent(section) {
+
+    const content = document.getElementById('content');
+
+    if (section === 'content') {
+        content.innerHTML = `
+            <h2> Content </h2>
+
+          
+            <p>Enhancing Safety: Occupational Health and Safety Standards for ICT</p>
+        `;}
+
+    else if (section === 'perstandard') {
+        content.innerHTML = `
+            <h2> Performance Standard</h2>
+            <p> Focus on preventing computer related hazards through awareness, proper ergonomics, and the 5S Methodology  </p>
+        `;
+    }
+
+
+    else if (section === 'constandard') {
+        content.innerHTML = `
+            <h2> Content Standard</h2>
+            <p>Demonstrate and understanding of the Occupational Safety and Health (OSH) Standards in ICT Environments</p>
+        `;
+    }
+
+
+    else if (section === 'learningcom') {
+        content.innerHTML = `
+            <h2> Learning Competencies</h2>
+            <p>The learners discuss Occupational Health and Safety (OHS) Standards in ICT Environments.</p>
+        `;
+    }
+
+
+    
+    else if (section === 'objectives') {
+        content.innerHTML = `
+            <h2> Objectives</h2>
+           
+            <p>To discuss to the learners the importance of determining hazards and risks in ICT workplace and explain the significance of following the 5S/p>
+        `;
+    }
+
+}
+
+</script>
+
+</body>
+</html>
